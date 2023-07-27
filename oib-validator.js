@@ -1,14 +1,10 @@
-const valid = document.querySelector('.valid');
-const invalid = document.querySelector('.invalid');
-const oibError = document.querySelector('.error');
+import errorMessage from './helpers/error-message';
 
 export default function isOibValid(input) {
 	const oib = input.toString();
 
 	if (oib.match(/\d{11}/) === null || oib.match(/\d{11}/ > 11)) {
-		valid.classList.remove('visible');
-		invalid.classList.remove('visible');
-		oibError.classList.add('visible');
+		errorMessage('OIB nije ispravan!', 'error');
 		return false;
 	}
 
@@ -26,19 +22,14 @@ export default function isOibValid(input) {
 	}
 
 	let check = 11 - calculated;
-
 	if (check === 10) {
 		check = 0;
 	}
 
-	if (check === Number(oib.slice(10))) {
-		oibError.classList.remove('visible');
-		invalid.classList.remove('visible');
-		valid.classList.add('visible');
+	if (check === +oib.slice(10)) {
+		errorMessage('OIB je ispravan!', 'valid');
 	} else {
-		oibError.classList.remove('visible');
-		valid.classList.remove('visible');
-		invalid.classList.add('visible');
+		errorMessage('OIB nije ispravan!', 'error');
 	}
 
 	return check === parseInt(oib[10]);
