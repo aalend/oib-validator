@@ -6,5 +6,5 @@ const checkOib = document.querySelector('form');
 checkOib.addEventListener('submit', e => {
 	e.preventDefault();
 
-	isOibValid(oibInput.value);
+	isOibValid(oibInput);
 });

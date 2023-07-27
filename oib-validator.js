@@ -1,10 +1,12 @@
 import errorMessage from './helpers/error-message';
 
 export default function isOibValid(input) {
-	const oib = input.toString();
+	const oib = input.value.toString();
 
 	if (oib.match(/\d{11}/) === null || oib.match(/\d{11}/ > 11)) {
 		errorMessage('OIB nije ispravan!', 'error');
+		input.focus();
+
 		return false;
 	}
 
@@ -28,8 +30,10 @@ export default function isOibValid(input) {
 
 	if (check === +oib.slice(10)) {
 		errorMessage('OIB je ispravan!', 'valid');
+		input.focus();
 	} else {
 		errorMessage('OIB nije ispravan!', 'error');
+		input.focus();
 	}
 
 	return check === parseInt(oib[10]);
