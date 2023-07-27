@@ -86,3 +86,8 @@ body {
 	max-width: 100%;
 	margin-block-end: var(--size-2);
 }
+
+.sub-header {
+	font-size: var(--font-size-4);
+	font-weight: bold;
+}
