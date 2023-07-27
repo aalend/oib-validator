@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<link rel="stylesheet" href="styles.css" />
+	<script type="module" src="/main.js"></script>
+	<body>
+		<div class="container center">
+			<h1>OIB Validator</h1>
+			<h3>Provjera ispravnosti OIB-a</h3>
+			<form action="" class="form">
+				<div class="form__container">
+					<label for="oib" class="form__label sr-only">Enter OIB</label>
+					<input
+						id="oib"
+						type="text"
+						class="form__control"
+						name="oib"
+						placeholder="OIB sadrži 11 znamenki"
+					/>
+				</div>
+				<p class="error hidden">OIB je prekratak</p>
+				<p class="valid hidden">OIB je ispravan</p>
+				<p class="invalid hidden">OIB nije ispravan</p>
+				<button type="submit">Provjeri OIB</button>
+			</form>
+			<p>
+				OIB validator provjerava ispravnost unesenog OIB-a prema matematičkoj formuli i pravilima
+				koja određuju ispravnost tog broja. Provjera uključuje sljedeće korake:
+			</p>
+			<ol>
+				<li>Dužina broja: OIB mora sadržavati 11 znamenki.</li>
+				<li>
+					Pravilnost kontrolnog broja: OIB sadrži jedan kontrolni broj koji se izračunava na
+					temelju ostalih znamenki. Validator provjerava jesu li sve znamenke, uključujući i
+					kontrolnu znamenku, ispravno određene prema pravilima izračuna.
+				</li>
+				<li>
+					Ispravnost formata: OIB može sadržavati samo brojke, a ne smiju se nalaziti znakovi
+					razmaka ili bilo koje druge znakove.
+				</li>
+			</ol>
+			<p>
+				Korištenje OIB validatora pomaže osigurati točnost i valjanost unesenih OIB-a prilikom
+				upisa u sustav ili obrade podataka. To je posebno važno u poslovnim sustavima, obrtu, i
+				ostalim organizacijama gdje je važno izbjeći greške u unosu OIB-a i osigurati ispravne
+				informacije o građanima i pravnim subjektima.
+			</p>
+		</div>
+	</body>
+</html>
