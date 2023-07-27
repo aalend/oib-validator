@@ -25,7 +25,7 @@ export default function isOibValid(input) {
 		calculated %= 11;
 	}
 
-	const check = 11 - calculated;
+	let check = 11 - calculated;
 
 	if (check === 10) {
 		check = 0;
