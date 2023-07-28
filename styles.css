@@ -16,6 +16,10 @@ body {
 	min-height: 100vh;
 }
 
+h1 {
+	font-size: var(--font-size-fluid-3);
+}
+
 .error {
 	position: relative;
 	background-color: var(--red-1);
@@ -59,6 +63,7 @@ body {
 	justify-content: center;
 	min-height: inherit;
 	gap: var(--size-5);
+	padding-block: var(--size-7);
 }
 
 .sr-only {
