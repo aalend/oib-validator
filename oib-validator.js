@@ -3,13 +3,21 @@ import errorMessage from './helpers/error-message';
 export default function isOibValid(input) {
 	const oib = input.value.toString();
 
-	// Check if `oib` is NaN.
+	// Check if `oib` isNaN.
 	if (isNaN(oib)) {
 		errorMessage('OIB sadrži isključivo brojeve!', 'error');
 		return;
 	}
 
-	if (oib.match(/\d{11}/) === null || oib.match(/\d{11}/ > 11 || oib.match(/\d{11}/ < 11))) {
+	// Check if input is empty
+	if (!oib) {
+		errorMessage('Upišite OIB', 'error');
+		input.focus();
+
+		return;
+	}
+
+	if (oib.match(/\d{11}/ > 11 || oib.match(/\d{11}/ < 11))) {
 		errorMessage('OIB nije ispravan!', 'error');
 		input.focus();
 
