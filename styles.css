@@ -16,13 +16,24 @@ body {
 	min-height: 100vh;
 }
 
-.error,
-.invalid {
+.error {
+	position: relative;
+	background-color: var(--red-1);
 	color: var(--red-8);
+	padding-block: var(--size-4);
+	padding-inline: var(--size-3);
+	border: 0.25rem solid var(--red-4);
+	border-radius: var(--size-2);
 }
 
 .valid {
+	position: relative;
+	background-color: var(--green-1);
 	color: var(--green-8);
+	padding-block: var(--size-4);
+	padding-inline: var(--size-3);
+	border: 0.25rem solid var(--green-4);
+	border-radius: var(--size-2);
 }
 .hidden {
 	display: none;
