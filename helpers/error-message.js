@@ -2,8 +2,8 @@ export default function errorMessage(message, className) {
 	const errorContainer = document.querySelector('.error-container');
 
 	const msg = `
-		<div class="${className}" role="alert">
-			<span class="block sm:inline">${message}</span>
+		<div class="${className}">
+			<span class="block">${message}</span>
 		</div>`;
 
 	errorContainer.innerHTML = '';
