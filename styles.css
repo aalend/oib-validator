@@ -11,6 +11,7 @@
 @import 'open-props/normalize/light';
 @import 'open-props/buttons/light';
 
+/* Global styles */
 body {
 	font-family: var(--font-sans);
 	min-height: 100vh;
@@ -18,6 +19,37 @@ body {
 
 h1 {
 	font-size: var(--font-size-fluid-3);
+}
+
+.sub-header {
+	font-size: var(--font-size-4);
+	font-weight: bold;
+}
+
+/* Dark mode */
+.toggle-mode {
+	margin: 1rem;
+	position: absolute;
+	right: 0;
+}
+
+.dark {
+	background-color: var(--gray-10);
+	color: var(--gray-1);
+
+	& h1 {
+		color: var(--gray-1);
+	}
+
+	.form__button {
+		background-color: var(--gray-1);
+		color: var(--blue-8);
+		font-weight: var(--font-weight-8);
+	}
+
+	.form__control {
+		color: var(--gray-10);
+	}
 }
 
 .error {
@@ -63,7 +95,7 @@ h1 {
 	justify-content: center;
 	min-height: inherit;
 	gap: var(--size-5);
-	padding-block: var(--size-7);
+	padding-block: var(--size-9);
 }
 
 .sr-only {
@@ -78,6 +110,7 @@ h1 {
 	border-width: 0;
 }
 
+/* Form styles */
 .form {
 	display: flex;
 	flex-direction: column;
@@ -103,7 +136,9 @@ h1 {
 	margin-block-end: var(--size-2);
 }
 
-.sub-header {
-	font-size: var(--font-size-4);
-	font-weight: bold;
+.form__button {
+	background-color: var(--blue-8);
+	color: var(--gray-1);
+	font-weight: var(--font-weight-8);
+	letter-spacing: 0.015rem;
 }
