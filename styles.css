@@ -26,6 +26,10 @@ h1 {
 	font-weight: bold;
 }
 
+.toggle-mode {
+	background-color: var(--gray-10);
+}
+
 /* Dark mode */
 .toggle-mode {
 	margin: 1rem;
@@ -49,6 +53,10 @@ h1 {
 
 	.form__control {
 		color: var(--gray-10);
+	}
+
+	.toggle-mode {
+		background-color: white;
 	}
 }
 

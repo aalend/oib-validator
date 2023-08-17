@@ -4,7 +4,6 @@ export const iconSun = `<svg
 	viewBox="0 0 24 24"
 	stroke-width="1.5"
 	stroke="var(--gray-10)"
-	class="w-6 h-6"
 >
 	<path
 		stroke-linecap="round"
@@ -15,11 +14,10 @@ export const iconSun = `<svg
 
 export const iconMoon = `<svg
 	xmlns="http://www.w3.org/2000/svg"
-	fill="var(--gray-10)"
+	fill="white"
 	viewBox="0 0 24 24"
 	stroke-width="1.5"
-	stroke="var(--gray-10)"
-	class="w-6 h-6"
+	stroke="white"
 >
 	<path
 		stroke-linecap="round"
